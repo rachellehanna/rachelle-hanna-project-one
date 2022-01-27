@@ -1,0 +1,22 @@
+.wrapper {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    color: $primary;
+    background-color: $secondary;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        background-color: $tertiary;
+    }
+}

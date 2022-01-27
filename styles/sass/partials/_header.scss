@@ -1,0 +1,41 @@
+header {
+    background-color: $quinary;
+    min-height: 100vh;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .headerImgContainer {
+            width: 45%;
+            img {
+                max-width: 100%; /*dont break container please*/
+                vertical-align: middle; /*if you have extra space be in the middle*/
+                box-shadow: 1rem 1rem 1px white;
+                position: relative;
+                top: 4rem;
+            }
+        }
+        .headerContent {
+            width: 55%;
+            .contentContainer {
+                margin: 0 auto;
+                width: 65%;
+                h1 {
+                    position: relative;
+                }
+                img {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+/*contact header*/
+
+.contactHeader {
+    min-height: 50vh;
+    background-image: url(../assets/contact-image-1.jpg);
+}
