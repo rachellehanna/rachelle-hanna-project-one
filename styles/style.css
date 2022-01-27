@@ -298,11 +298,12 @@ button {
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 6rem;
+  font-size: 4rem;
+  line-height: 4.6rem;
 }
 
-h2 {
+h2,
+.menuHarper {
   font-size: 2.1rem;
   /*42px*/
 }
@@ -326,6 +327,11 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.homeHeader {
+  font-size: 6rem;
+  line-height: 6rem;
 }
 
 /*
@@ -431,6 +437,12 @@ header .wrapper .headerContent .contentContainer img {
 .contactHeader {
   min-height: 50vh;
   background-image: url(../assets/contact-image-1.jpg);
+}
+
+/*blog header*/
+.blogHeader {
+  min-height: 50vh;
+  background-image: url(../assets/blog-image-1.jpg);
 }
 
 main section {
@@ -585,6 +597,11 @@ main section {
 }
 
 /*Contact page section*/
+.contact {
+  background: #f6f6f6;
+}
+
+/*Blog page section*/
 footer {
   background-color: #171717;
   color: white;
