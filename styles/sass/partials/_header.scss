@@ -41,7 +41,11 @@ header {
 }
 
 /*blog header*/
+
 .blogHeader {
     min-height: 50vh;
     background-image: url(../assets/blog-image-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

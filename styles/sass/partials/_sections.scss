@@ -103,8 +103,83 @@ main section {
 }
 
 /*Contact page section*/
+
 .contact {
     background: $shadeWhite;
 }
 
 /*Blog page section*/
+
+.blog {
+    background: $shadeWhite;
+    .flexContainer {
+        display: flex;
+        .aboutHarperContainer {
+            width: 30%;
+            .img {
+                max-width: 100%;
+            }
+        }
+        .blogPost {
+            width: 60%;
+        }
+    }
+}
+
+h3 {
+    padding-top: 2rem;
+}
+
+.aboutHarperContent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.aboutHarperContent,
+.recentPosts,
+.postContainer,
+.commentContainer {
+    background-color: #ffff;
+    padding: 2rem;
+}
+.recentPosts {
+    margin-top: 2rem;
+}
+
+.postContainer {
+    border-bottom: 0.2rem solid $quaternary;
+    margin-top: 4rem;
+}
+
+.postContainer {
+    padding-bottom: 3rem;
+}
+
+.blogPost {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.commentContainer {
+    display: flex;
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    p {
+        margin: 0;
+    }
+    .commentImgContainer {
+        width: 50%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.commentsContainer {
+    margin: 2rem 0;
+    border-bottom: 0.2rem solid $quaternary;
+}

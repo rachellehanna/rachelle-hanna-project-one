@@ -334,6 +334,14 @@ a {
   line-height: 6rem;
 }
 
+.menuBlog {
+  color: #f6f6f6;
+}
+
+.menuContact {
+  color: #f6f6f6;
+}
+
 /*
 
 ul {
@@ -347,7 +355,7 @@ ul {
 
 */
 .navBar {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   background-color: #b9dde7;
 }
 .navBar ul {
@@ -443,6 +451,9 @@ header .wrapper .headerContent .contentContainer img {
 .blogHeader {
   min-height: 50vh;
   background-image: url(../assets/blog-image-1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main section {
@@ -602,6 +613,95 @@ main section {
 }
 
 /*Blog page section*/
+.blog {
+  background: #f6f6f6;
+}
+.blog .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blog .flexContainer .aboutHarperContainer {
+  width: 30%;
+}
+.blog .flexContainer .aboutHarperContainer .img {
+  max-width: 100%;
+}
+.blog .flexContainer .blogPost {
+  width: 60%;
+}
+
+h3 {
+  padding-top: 2rem;
+}
+
+.aboutHarperContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4rem;
+}
+
+.aboutHarperContent,
+.recentPosts,
+.postContainer,
+.commentContainer {
+  background-color: #ffff;
+  padding: 2rem;
+}
+
+.recentPosts {
+  margin-top: 2rem;
+}
+
+.postContainer {
+  border-bottom: 0.2rem solid #227284;
+  margin-top: 4rem;
+}
+
+.postContainer {
+  padding-bottom: 3rem;
+}
+
+.blogPost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.commentContainer:last-child {
+  margin-bottom: 0;
+}
+.commentContainer p {
+  margin: 0;
+}
+.commentContainer .commentImgContainer {
+  width: 50%;
+}
+.commentContainer .commentImgContainer img {
+  max-width: 100%;
+}
+
+.commentsContainer {
+  margin: 2rem 0;
+  border-bottom: 0.2rem solid #227284;
+}
+
 footer {
   background-color: #171717;
   color: white;
