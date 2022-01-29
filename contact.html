@@ -30,7 +30,7 @@
                     </li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li>
-                        <a href="./contact.html" class="menuContact">Contact</a>
+                        <a href="./contact.html" class="active">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
             <section class="contactFormSection" id="contactFormSection">
                 <div class="wrapper">
                     <div class="contactFormContainer">
-                        <div class="contactInfo">
+                        <div class="contactInfoContainer">
                             <ul class="socialIcons">
                                 <li>
                                     <a href="#"
@@ -63,7 +63,7 @@
                                         ><i class="fa-brands fa-twitter"></i>
                                     </a>
                                 </li>
-                                <!--need to change the icon belon to linkedin-->
+                                <!--need to change the icon below to linkedin-->
                                 <li>
                                     <a href="#"
                                         ><i class="fa-brands fa-snapchat"></i
@@ -90,17 +90,23 @@
                         </div>
 
                         <form action="" class="contactForm">
-                            <label for="name" class="sr-only">Name</label>
-                            <input type="text" id="name" placeholder="Name" />
+                            <div class="nameEmail">
+                                <label for="name" class="sr-only">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Name"
+                                />
 
-                            <label for="email" class="sr-only"
-                                >Email address</label
-                            >
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="Email address"
-                            />
+                                <label for="email" class="sr-only"
+                                    >Email address</label
+                                >
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Email address"
+                                />
+                            </div>
 
                             <label for="message" class="sr-only">Message</label>
                             <textarea
