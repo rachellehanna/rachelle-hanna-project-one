@@ -54,16 +54,18 @@ a {
 }
 
 .homeHeader {
+    display: inline-block;
     font-size: 6rem;
     line-height: 6rem;
 }
 
-.menuBlog {
+.active {
     color: $shadeWhite;
 }
 
-.menuContact {
-    color: $shadeWhite;
+.contactInfoContainer p a {
+    font-weight: bold;
+    font-family: $headingFont;
 }
 
 /*

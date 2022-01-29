@@ -1,6 +1,5 @@
 header {
     background-color: $quinary;
-    min-height: 100vh;
     .wrapper {
         display: flex;
         align-items: center;
@@ -8,11 +7,11 @@ header {
         .headerImgContainer {
             width: 45%;
             img {
-                max-width: 100%; /*dont break container please*/
+                max-width: 100%;
                 vertical-align: middle; /*if you have extra space be in the middle*/
-                box-shadow: 1rem 1rem 1px white;
+                box-shadow: 1rem 1rem 0px white;
                 position: relative;
-                top: 4rem;
+                top: 3rem;
             }
         }
         .headerContent {
@@ -25,7 +24,7 @@ header {
                 }
                 img {
                     position: absolute;
-                    right: 0;
+                    right: -3rem;
                     bottom: 0.5rem;
                 }
             }
@@ -33,19 +32,25 @@ header {
     }
 }
 
-/*contact header*/
+/*Contact page header & blog page header*/
 
-.contactHeader {
-    min-height: 50vh;
-    background-image: url(../assets/contact-image-1.jpg);
-}
-
-/*blog header*/
-
+.contactHeader,
 .blogHeader {
     min-height: 50vh;
-    background-image: url(../assets/blog-image-1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    h1 {
+        position: relative;
+        top: 20rem;
+    }
+}
+
+.contactHeader {
+    background-image: url(../assets/contact-image-1.jpg);
+}
+
+.blogHeader {
+    background-image: url(../assets/blog-image-1.jpg);
 }

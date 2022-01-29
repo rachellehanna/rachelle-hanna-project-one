@@ -330,16 +330,18 @@ a {
 }
 
 .homeHeader {
+  display: inline-block;
   font-size: 6rem;
   line-height: 6rem;
 }
 
-.menuBlog {
+.active {
   color: #f6f6f6;
 }
 
-.menuContact {
-  color: #f6f6f6;
+.contactInfoContainer p a {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
 }
 
 /*
@@ -385,11 +387,7 @@ button {
   background-color: #f38d8d;
   border: none;
   padding: 0.5rem 2rem;
-  font-size: 1rem;
-  letter-spacing: 1px;
   text-align: center;
-  font-weight: bold;
-  line-height: 32px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -398,9 +396,9 @@ button:hover {
   background-color: #68b0c1;
 }
 
+/*add focus on button*/
 header {
   background-color: #b9dde7;
-  min-height: 100vh;
 }
 header .wrapper {
   display: -webkit-box;
@@ -417,13 +415,12 @@ header .wrapper .headerImgContainer {
 }
 header .wrapper .headerImgContainer img {
   max-width: 100%;
-  /*dont break container please*/
   vertical-align: middle;
   /*if you have extra space be in the middle*/
-  -webkit-box-shadow: 1rem 1rem 1px white;
-          box-shadow: 1rem 1rem 1px white;
+  -webkit-box-shadow: 1rem 1rem 0px white;
+          box-shadow: 1rem 1rem 0px white;
   position: relative;
-  top: 4rem;
+  top: 3rem;
 }
 header .wrapper .headerContent {
   width: 55%;
@@ -437,23 +434,31 @@ header .wrapper .headerContent .contentContainer h1 {
 }
 header .wrapper .headerContent .contentContainer img {
   position: absolute;
-  right: 0;
+  right: -3rem;
   bottom: 0.5rem;
 }
 
-/*contact header*/
-.contactHeader {
-  min-height: 50vh;
-  background-image: url(../assets/contact-image-1.jpg);
-}
-
-/*blog header*/
+/*Contact page header & blog page header*/
+.contactHeader,
 .blogHeader {
   min-height: 50vh;
-  background-image: url(../assets/blog-image-1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-repeat: no-repeat;
+}
+.contactHeader h1,
+.blogHeader h1 {
+  position: relative;
+  top: 20rem;
+}
+
+.contactHeader {
+  background-image: url(../assets/contact-image-1.jpg);
+}
+
+.blogHeader {
+  background-image: url(../assets/blog-image-1.jpg);
 }
 
 main section {
@@ -479,15 +484,19 @@ main section {
 }
 .whosHarperContainer .textContainer {
   width: 50%;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
-.backgroundImage {
+.backgroundImageContainer {
+  height: 60vh;
+  padding-bottom: 4rem;
+}
+.backgroundImageContainer .backgroundImage {
   background-image: url("../assets/home-image-2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 90vh;
+  min-height: 100%;
 }
 
 .moreLinks,
@@ -510,6 +519,15 @@ main section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.linkContainer .linkItem a h3 {
+  padding: 0 0 0 1rem;
+}
+.linkContainer .linkItem p {
+  margin-right: 1rem;
 }
 
 .backgroundIcon {
@@ -544,28 +562,37 @@ main section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-.journeyContainer .textContainer {
-  width: 55%;
 }
 .journeyContainer .imageContainer {
   width: 45%;
+  vertical-align: middle;
 }
 .journeyContainer .imageContainer img {
   max-width: 100%;
-  /*dont break container please*/
   vertical-align: middle;
-  /*if you have extra space be in the middle*/
-  -webkit-box-shadow: 1rem 1rem 1px #227284;
-          box-shadow: 1rem 1rem 1px #227284;
+  -webkit-box-shadow: 1rem 1rem 0px #227284;
+          box-shadow: 1rem 1rem 0px #227284;
+}
+.journeyContainer .textContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .travels .imageContainer {
-  -webkit-box-shadow: -10rem 1rem 1px #68b0c1;
-          box-shadow: -10rem 1rem 1px #68b0c1;
+  -webkit-box-shadow: -10rem 1rem 0px #68b0c1;
+          box-shadow: -10rem 1rem 0px #68b0c1;
 }
 
 .favouriteThingsContainer {
@@ -591,8 +618,8 @@ main section {
       align-self: flex-end;
 }
 .favouriteThingsContainer .imageContainer {
-  -webkit-box-shadow: 10rem 1rem 1px #b9dde7;
-          box-shadow: 10rem 1rem 1px #b9dde7;
+  -webkit-box-shadow: 10rem 1rem 0px #b9dde7;
+          box-shadow: 10rem 1rem 0px #b9dde7;
 }
 
 .galleryContainer {
@@ -608,8 +635,21 @@ main section {
 }
 
 /*Contact page section*/
-.contact {
-  background: #f6f6f6;
+.socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.socialIcons li {
+  margin-right: 1.5rem;
+}
+.socialIcons i {
+  color: #227284;
+  font-size: 1.5rem;
+}
+
+.contactInfoContainer {
+  background: #ffff;
 }
 
 /*Blog page section*/
@@ -700,6 +740,95 @@ h3 {
 .commentsContainer {
   margin: 2rem 0;
   border-bottom: 0.2rem solid #227284;
+}
+
+/* Contact form */
+.contact {
+  background: #f6f6f6;
+}
+
+.contactFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contactInfoContainer {
+  padding: 1.5rem;
+  margin: 4rem 0 1rem 0;
+  width: 30%;
+}
+.contactInfoContainer p {
+  margin-bottom: 0;
+}
+
+.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(70% - 2rem);
+  margin: 4rem 0 0 2rem;
+}
+
+.nameEmail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.nameEmail input {
+  width: 50%;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #171717;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #171717;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #171717;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #171717;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #171717;
+  font-size: 0.8rem;
+  opacity: 1;
+}
+
+/*should put styles above in typography?*/
+textarea {
+  min-height: 6rem;
+  width: 100%;
+}
+
+#name {
+  margin-right: 0.5rem;
 }
 
 footer {

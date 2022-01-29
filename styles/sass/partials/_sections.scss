@@ -12,16 +12,20 @@ main section {
     align-items: flex-end;
     .textContainer {
         width: 50%;
-        margin-top: 4rem;
+        margin-top: 6rem;
     }
 }
 
-.backgroundImage {
-    background-image: url("../assets/home-image-2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 90vh;
+.backgroundImageContainer {
+    height: 60vh;
+    padding-bottom: 4rem;
+    .backgroundImage {
+        background-image: url("../assets/home-image-2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100%;
+    }
 }
 
 .moreLinks,
@@ -37,6 +41,15 @@ main section {
         width: 50%;
         a {
             display: flex;
+            align-items: center;
+
+            h3 {
+                padding: 0 0 0 1rem;
+            }
+        }
+
+        p {
+            margin-right: 1rem;
         }
     }
 }
@@ -61,22 +74,27 @@ main section {
 
 .journeyContainer {
     display: flex;
-    align-items: flex-end;
-    .textContainer {
-        width: 55%;
-    }
     .imageContainer {
         width: 45%;
+        vertical-align: middle;
+
         img {
-            max-width: 100%; /*dont break container please*/
-            vertical-align: middle; /*if you have extra space be in the middle*/
-            box-shadow: 1rem 1rem 1px $quaternary;
+            max-width: 100%;
+            vertical-align: middle;
+            box-shadow: 1rem 1rem 0px $quaternary;
         }
+    }
+    .textContainer {
+        display: flex;
+        width: 50%;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
 .travels .imageContainer {
-    box-shadow: -10rem 1rem 1px $tertiary;
+    box-shadow: -10rem 1rem 0px $tertiary;
 }
 
 .favouriteThingsContainer {
@@ -91,7 +109,7 @@ main section {
         }
     }
     .imageContainer {
-        box-shadow: 10rem 1rem 1px $quinary;
+        box-shadow: 10rem 1rem 0px $quinary;
     }
 }
 
@@ -104,8 +122,19 @@ main section {
 
 /*Contact page section*/
 
-.contact {
-    background: $shadeWhite;
+.socialIcons {
+    display: flex;
+    li {
+        margin-right: 1.5rem;
+    }
+    i {
+        color: $quaternary;
+        font-size: 1.5rem;
+    }
+}
+
+.contactInfoContainer {
+    background: #ffff;
 }
 
 /*Blog page section*/
