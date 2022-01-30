@@ -2,8 +2,13 @@
 
 @media (max-width: 1080px) {
     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
-    .homeHeader {
+    .homeHeader,
+    h1 {
         font-size: 4rem;
+    }
+
+    p {
+        font-size: 0.8rem;
     }
 
     .travelsContainer,
@@ -60,6 +65,20 @@
     .galleryItem {
         width: 100%;
     }
+
+    .contactFormContainer {
+        flex-direction: column-reverse;
+
+        .contactForm {
+            width: 100%;
+            margin: 4rem 0;
+        }
+
+        .contactInfoContainer {
+            width: 100%;
+            margin: 0;
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -106,6 +125,32 @@
             width: 100%;
         }
     }
+
+    .blog {
+        .flexContainer {
+            flex-direction: column-reverse;
+
+            .blogPost,
+            aside {
+                width: 100%;
+            }
+        }
+
+        .aboutHarperContent {
+            img {
+                width: 50%;
+                align-self: center;
+            }
+        }
+    }
+
+    .nameEmail {
+        flex-direction: column;
+
+        input {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 500px) {
@@ -117,7 +162,8 @@
             }
         }
 
-        .homeHeader {
+        .homeHeader,
+        h1 {
             font-size: 3rem;
         }
     }

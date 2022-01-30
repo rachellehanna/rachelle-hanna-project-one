@@ -778,6 +778,7 @@ main section {
   margin: 0;
 }
 .commentContainer .commentImgContainer {
+  margin-right: 0.5rem;
   width: 50%;
 }
 .commentContainer .commentImgContainer img {
@@ -893,8 +894,13 @@ footer p {
 /* _mediaQueries.scss */
 @media (max-width: 1080px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
-  .homeHeader {
+  .homeHeader,
+h1 {
     font-size: 4rem;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 
   .travelsContainer,
@@ -970,6 +976,21 @@ footer p {
   .galleryItem {
     width: 100%;
   }
+
+  .contactFormContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contactFormContainer .contactForm {
+    width: 100%;
+    margin: 4rem 0;
+  }
+  .contactFormContainer .contactInfoContainer {
+    width: 100%;
+    margin: 0;
+  }
 }
 @media (max-width: 800px) {
   /* all of our styles for TABLET devices will go within this breakpoint */
@@ -1019,13 +1040,40 @@ footer p {
   .linkContainer .linkItem {
     width: 100%;
   }
+
+  .blog .flexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .blog .flexContainer .blogPost,
+.blog .flexContainer aside {
+    width: 100%;
+  }
+  .blog .aboutHarperContent img {
+    width: 50%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .nameEmail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nameEmail input {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
   header .wrapper .headerContent {
     width: 100%;
   }
-  header .homeHeader {
+  header .homeHeader,
+header h1 {
     font-size: 3rem;
   }
 }
