@@ -1,13 +1,124 @@
 /* _mediaQueries.scss */
 
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
     /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+    .homeHeader {
+        font-size: 4rem;
+    }
+
+    .travelsContainer,
+    .favouriteThingsContainer,
+    .journeyContainer {
+        flex-direction: column;
+
+        .textContainer {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .imageContainer {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        h2,
+        h3 {
+            margin-top: 1rem;
+        }
+    }
+
+    .travels,
+    .favouriteThingsContainer,
+    .journey {
+        .imageContainer {
+            box-shadow: none;
+            position: static;
+
+            img {
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+    }
+
+    .journey {
+        background: none;
+        padding-top: 2rem;
+        .imageContainer {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .favouriteThingsContainer {
+        flex-direction: column-reverse;
+    }
+
+    .galleryItem {
+        width: 100%;
+    }
 }
 
 @media (max-width: 800px) {
-    /* all of our styles for TABLET devices will go within this breakpoin */
+    /* all of our styles for TABLET devices will go within this breakpoint */
+    .navBar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuHarper {
+        display: none;
+    }
+
+    header {
+        .wrapper {
+            flex-direction: column;
+
+            .headerImgContainer {
+                img {
+                    box-shadow: none;
+                }
+            }
+
+            .headerContent {
+                .contentContainer {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .whosHarper {
+        .textContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .linkContainer {
+        .linkItem {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 500px) {
-    /* all of our styles for MOBILE devices will go within this breakpoin */
+    /* all of our styles for MOBILE devices will go within this breakpoint */
+    header {
+        .wrapper {
+            .headerContent {
+                width: 100%;
+            }
+        }
+
+        .homeHeader {
+            font-size: 3rem;
+        }
+    }
 }
