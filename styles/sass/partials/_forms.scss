@@ -1,4 +1,4 @@
-/* Contact form */
+/* Contact page and blog page form */
 .contact {
     background: $shadeWhite;
 }
@@ -17,16 +17,19 @@
     }
 }
 
-.contactForm {
+.contactForm,
+.blogForm {
     display: flex;
     flex-direction: column;
+}
+
+.contactForm {
     width: calc(70% - 2rem);
     margin: 4rem 0 0 2rem;
 }
 
 .nameEmail {
     display: flex;
-    margin-bottom: 1rem;
     width: 100%;
     input {
         width: 50%;
@@ -44,7 +47,6 @@ textarea {
         opacity: 1;
     }
 }
-
 /*should put styles above in typography?*/
 
 textarea {

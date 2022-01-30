@@ -2,4 +2,8 @@ footer {
     background-color: $primary;
     color: white;
     text-align: center;
+
+    p {
+        margin: 0;
+    }
 }

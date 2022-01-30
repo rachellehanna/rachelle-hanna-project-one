@@ -7,10 +7,13 @@
         li {
             margin: 0rem 2rem;
         }
-        a:hover {
-            color: $shadeWhite;
+        a {
+            &:hover {
+                color: $shadeWhite;
+            }
+            &:focus {
+                border: $primary 1px dashed;
+            }
         }
     }
 }
-
-/*need to add focus with hover for accessibility*/

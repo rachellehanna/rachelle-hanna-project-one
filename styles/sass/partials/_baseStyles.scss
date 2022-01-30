@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+main {
+    overflow: auto; /* prevent margins from escaping parent element */
+}
+
 button {
     color: $primary;
     background-color: $secondary;
@@ -14,6 +18,8 @@ button {
     transition: 0.3s;
     &:hover {
         background-color: $tertiary;
+        &:focus {
+            border: $primary 1px dashed;
+        }
     }
 }
-/*add focus on button*/

@@ -306,11 +306,19 @@ h2,
 .menuHarper {
   font-size: 2.1rem;
   /*42px*/
+  line-height: 2.1rem;
+}
+
+.blog aside h2 {
+  font-size: 1.6rem;
+  /*32px*/
+  line-height: 1.6rem;
 }
 
 h3 {
   font-size: 1.6rem;
   /*32px*/
+  line-height: 1.6rem;
 }
 
 ul,
@@ -344,18 +352,6 @@ a {
   font-family: "Oswald", sans-serif;
 }
 
-/*
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-        padding: inherit;
-        margin: inherit;
-    }
-
-*/
 .navBar {
   padding: 1rem 0;
   background-color: #b9dde7;
@@ -374,12 +370,19 @@ ul {
 .navBar ul a:hover {
   color: #f6f6f6;
 }
+.navBar ul a:focus {
+  border: #171717 1px dashed;
+}
 
-/*need to add focus with hover for accessibility*/
 .wrapper {
   max-width: 1300px;
   width: 90%;
   margin: 0 auto;
+}
+
+main {
+  overflow: auto;
+  /* prevent margins from escaping parent element */
 }
 
 button {
@@ -395,8 +398,10 @@ button {
 button:hover {
   background-color: #68b0c1;
 }
+button:hover:focus {
+  border: #171717 1px dashed;
+}
 
-/*add focus on button*/
 header {
   background-color: #b9dde7;
 }
@@ -407,8 +412,6 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 header .wrapper .headerImgContainer {
   width: 45%;
@@ -441,16 +444,21 @@ header .wrapper .headerContent .contentContainer img {
 /*Contact page header & blog page header*/
 .contactHeader,
 .blogHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   min-height: 50vh;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
   background-repeat: no-repeat;
 }
 .contactHeader h1,
 .blogHeader h1 {
   position: relative;
-  top: 20rem;
+  top: 2rem;
 }
 
 .contactHeader {
@@ -502,7 +510,12 @@ main section {
 .moreLinks,
 .journey {
   background-color: #f6f6f6;
-  padding: 4rem 0;
+  padding: 8rem 0 4rem 0;
+}
+
+.moreLinks,
+.favouriteThings {
+  margin-bottom: 0;
 }
 
 .linkContainer {
@@ -514,6 +527,7 @@ main section {
 }
 .linkContainer .linkItem {
   width: 50%;
+  margin-bottom: 1rem;
 }
 .linkContainer .linkItem a {
   display: -webkit-box;
@@ -555,7 +569,8 @@ main section {
           align-items: flex-end;
 }
 .travelsContainer .textContainer {
-  margin-left: 3rem;
+  margin-left: 6rem;
+  margin-bottom: 1rem;
 }
 
 .journeyContainer {
@@ -564,8 +579,9 @@ main section {
   display: flex;
 }
 .journeyContainer .imageContainer {
-  width: 45%;
   vertical-align: middle;
+  width: 30%;
+  margin-right: 2rem;
 }
 .journeyContainer .imageContainer img {
   max-width: 100%;
@@ -574,10 +590,10 @@ main section {
           box-shadow: 1rem 1rem 0px #227284;
 }
 .journeyContainer .textContainer {
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -593,6 +609,12 @@ main section {
 .travels .imageContainer {
   -webkit-box-shadow: -10rem 1rem 0px #68b0c1;
           box-shadow: -10rem 1rem 0px #68b0c1;
+  position: relative;
+  bottom: 2rem;
+}
+.travels .imageContainer img {
+  -webkit-box-shadow: 1rem 1rem 0px #68b0c1;
+          box-shadow: 1rem 1rem 0px #68b0c1;
 }
 
 .favouriteThingsContainer {
@@ -613,13 +635,23 @@ main section {
           align-items: flex-end;
   margin-right: 3rem;
 }
+.favouriteThingsContainer .textContainer h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
 .favouriteThingsContainer .textContainer .button {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 .favouriteThingsContainer .imageContainer {
+  position: relative;
+  top: 1rem;
   -webkit-box-shadow: 10rem 1rem 0px #b9dde7;
           box-shadow: 10rem 1rem 0px #b9dde7;
+}
+.favouriteThingsContainer .imageContainer img {
+  -webkit-box-shadow: 1rem 1rem 0px #b9dde7;
+          box-shadow: 1rem 1rem 0px #b9dde7;
 }
 
 .galleryContainer {
@@ -632,6 +664,14 @@ main section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.galleryItem {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+.galleryItem img {
+  width: 100%;
 }
 
 /*Contact page section*/
@@ -661,18 +701,18 @@ main section {
   display: -ms-flexbox;
   display: flex;
 }
-.blog .flexContainer .aboutHarperContainer {
+.blog .flexContainer aside {
   width: 30%;
 }
-.blog .flexContainer .aboutHarperContainer .img {
+.blog .flexContainer aside .img {
   max-width: 100%;
 }
 .blog .flexContainer .blogPost {
   width: 60%;
 }
 
-h3 {
-  padding-top: 2rem;
+.blog h2 {
+  padding: 1rem 0;
 }
 
 .aboutHarperContent {
@@ -695,7 +735,14 @@ h3 {
 }
 
 .recentPosts {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+.recentPosts ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.recentPosts ul li a:hover {
+  color: #227284;
 }
 
 .postContainer {
@@ -742,7 +789,7 @@ h3 {
   border-bottom: 0.2rem solid #227284;
 }
 
-/* Contact form */
+/* Contact page and blog page form */
 .contact {
   background: #f6f6f6;
 }
@@ -765,7 +812,8 @@ h3 {
   margin-bottom: 0;
 }
 
-.contactForm {
+.contactForm,
+.blogForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,6 +821,9 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.contactForm {
   width: calc(70% - 2rem);
   margin: 4rem 0 0 2rem;
 }
@@ -781,7 +832,6 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 1rem;
   width: 100%;
 }
 .nameEmail input {
@@ -836,14 +886,146 @@ footer {
   color: white;
   text-align: center;
 }
+footer p {
+  margin: 0;
+}
 
 /* _mediaQueries.scss */
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   /* all of our styles for smaller DESKTOP devices will go within this breakpoint */
+  .homeHeader {
+    font-size: 4rem;
+  }
+
+  .travelsContainer,
+.favouriteThingsContainer,
+.journeyContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .travelsContainer .textContainer,
+.favouriteThingsContainer .textContainer,
+.journeyContainer .textContainer {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    width: 100%;
+  }
+  .travelsContainer .imageContainer,
+.favouriteThingsContainer .imageContainer,
+.journeyContainer .imageContainer {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .travelsContainer h2,
+.travelsContainer h3,
+.favouriteThingsContainer h2,
+.favouriteThingsContainer h3,
+.journeyContainer h2,
+.journeyContainer h3 {
+    margin-top: 1rem;
+  }
+
+  .travels .imageContainer,
+.favouriteThingsContainer .imageContainer,
+.journey .imageContainer {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: static;
+  }
+  .travels .imageContainer img,
+.favouriteThingsContainer .imageContainer img,
+.journey .imageContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%;
+  }
+
+  .journey {
+    background: none;
+    padding-top: 2rem;
+  }
+  .journey .imageContainer {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .favouriteThingsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .galleryItem {
+    width: 100%;
+  }
 }
 @media (max-width: 800px) {
-  /* all of our styles for TABLET devices will go within this breakpoin */
+  /* all of our styles for TABLET devices will go within this breakpoint */
+  .navBar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menuHarper {
+    display: none;
+  }
+
+  header .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .wrapper .headerImgContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  header .wrapper .headerContent .contentContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .whosHarper .textContainer {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .linkContainer .linkItem {
+    width: 100%;
+  }
 }
 @media (max-width: 500px) {
-  /* all of our styles for MOBILE devices will go within this breakpoin */
+  /* all of our styles for MOBILE devices will go within this breakpoint */
+  header .wrapper .headerContent {
+    width: 100%;
+  }
+  header .homeHeader {
+    font-size: 3rem;
+  }
 }

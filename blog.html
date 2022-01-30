@@ -26,8 +26,8 @@
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li>
-                        <a href="./index.html" class="menuHarper">Harper</a>
+                    <li class="menuHarper">
+                        <a href="./index.html">Harper</a>
                     </li>
                     <li><a href="./blog.html" class="active">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
@@ -38,7 +38,6 @@
 
         <!--Header starts-->
         <header class="blogHeader">
-            <div class="headerblogBackground"></div>
             <div class="wrapper">
                 <h1>Blog</h1>
             </div>
@@ -50,29 +49,37 @@
             <section class="blogSection" id="blogSection">
                 <div class="wrapper">
                     <div class="flexContainer">
-                        <div class="aboutHarperContainer">
+                        <aside>
                             <div class="aboutHarperContent">
                                 <img src="./assets/blog-image-2.jpg" alt="#" />
-                                <h3>About Harper</h3>
+                                <h2>About Harper</h2>
                                 <p>
                                     Consequatur exercitationem accusamus dolor
                                     quae ab animi, quo in impedit natus eum
-                                    tenetur voluptatum doloribus nostrum dolores
-                                    asperiores consequuntur autem. Ipsam,
-                                    eligendi!
+                                    tenetur voluptatum.
                                 </p>
                             </div>
 
                             <div class="recentPosts">
-                                <h3>Recent Posts</h3>
+                                <h2>Recent Posts</h2>
                                 <ul>
-                                    <li>Ad amet quasi deleniti</li>
-                                    <li>Eligendi expedita eum sapiente</li>
-                                    <li>Repellendus placeat</li>
-                                    <li>Blanditiis quo beatae</li>
+                                    <li>
+                                        <a href="#">Ad amet quasi deleniti</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            >Eligendi expedita eum sapiente</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="#">Repellendus placeat</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blanditiis quo beatae</a>
+                                    </li>
                                 </ul>
                             </div>
-                        </div>
+                        </aside>
 
                         <div class="blogPost">
                             <div class="postContainer">
@@ -192,27 +199,30 @@
                                     </p>
                                 </div>
                             </div>
-                            <form class="commentForm">
-                                <label for="name" class="sr-only">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Name"
-                                />
+                            <form action="" class="blogForm">
+                                <div class="nameEmail">
+                                    <label for="name" class="sr-only"
+                                        >Name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        placeholder="Name"
+                                    />
 
-                                <label for="email" class="sr-only"
-                                    >Email address</label
-                                >
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Email address"
-                                />
+                                    <label for="email" class="sr-only"
+                                        >Email address</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        placeholder="Email address"
+                                    />
+                                </div>
 
                                 <label for="comment" class="sr-only"
                                     >Comment</label
-                                >
-                                <textarea
+                                ><textarea
                                     name="comment"
                                     id="comment"
                                     cols="30"

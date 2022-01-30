@@ -3,7 +3,6 @@ header {
     .wrapper {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         .headerImgContainer {
             width: 45%;
             img {
@@ -36,14 +35,15 @@ header {
 
 .contactHeader,
 .blogHeader {
+    display: flex;
+    align-items: flex-end;
     min-height: 50vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
     h1 {
         position: relative;
-        top: 20rem;
+        top: 2rem;
     }
 }
 

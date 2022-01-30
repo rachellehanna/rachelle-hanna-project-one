@@ -31,10 +31,17 @@ h1 {
 h2,
 .menuHarper {
     font-size: 2.1rem; /*42px*/
+    line-height: 2.1rem;
+}
+
+.blog aside h2 {
+    font-size: 1.6rem; /*32px*/
+    line-height: 1.6rem;
 }
 
 h3 {
     font-size: 1.6rem; /*32px*/
+    line-height: 1.6rem;
 }
 
 ul,
@@ -67,16 +74,3 @@ a {
     font-weight: bold;
     font-family: $headingFont;
 }
-
-/*
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-        padding: inherit;
-        margin: inherit;
-    }
-
-*/

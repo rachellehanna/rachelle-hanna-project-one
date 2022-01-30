@@ -31,7 +31,12 @@ main section {
 .moreLinks,
 .journey {
     background-color: $shadeWhite;
-    padding: 4rem 0;
+    padding: 8rem 0 4rem 0;
+}
+
+.moreLinks,
+.favouriteThings {
+    margin-bottom: 0;
 }
 
 .linkContainer {
@@ -39,6 +44,7 @@ main section {
     flex-wrap: wrap;
     .linkItem {
         width: 50%;
+        margin-bottom: 1rem;
         a {
             display: flex;
             align-items: center;
@@ -68,15 +74,17 @@ main section {
     display: flex;
     align-items: flex-end;
     .textContainer {
-        margin-left: 3rem;
+        margin-left: 6rem;
+        margin-bottom: 1rem;
     }
 }
 
 .journeyContainer {
     display: flex;
     .imageContainer {
-        width: 45%;
         vertical-align: middle;
+        width: 30%;
+        margin-right: 2rem;
 
         img {
             max-width: 100%;
@@ -85,8 +93,8 @@ main section {
         }
     }
     .textContainer {
+        width: 70%;
         display: flex;
-        width: 50%;
         align-items: flex-start;
         flex-direction: column;
         justify-content: space-between;
@@ -95,6 +103,12 @@ main section {
 
 .travels .imageContainer {
     box-shadow: -10rem 1rem 0px $tertiary;
+    position: relative;
+    bottom: 2rem;
+
+    img {
+        box-shadow: 1rem 1rem 0px $tertiary;
+    }
 }
 
 .favouriteThingsContainer {
@@ -104,12 +118,23 @@ main section {
         flex-direction: column;
         align-items: flex-end;
         margin-right: 3rem;
+
+        h3 {
+            align-self: flex-start;
+        }
+
         .button {
             align-self: flex-end;
         }
     }
     .imageContainer {
+        position: relative;
+        top: 1rem;
         box-shadow: 10rem 1rem 0px $quinary;
+
+        img {
+            box-shadow: 1rem 1rem 0px $quinary;
+        }
     }
 }
 
@@ -118,6 +143,15 @@ main section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.galleryItem {
+    width: 30%;
+    margin-bottom: 1rem;
+
+    img {
+        width: 100%;
+    }
 }
 
 /*Contact page section*/
@@ -143,7 +177,7 @@ main section {
     background: $shadeWhite;
     .flexContainer {
         display: flex;
-        .aboutHarperContainer {
+        aside {
             width: 30%;
             .img {
                 max-width: 100%;
@@ -155,8 +189,8 @@ main section {
     }
 }
 
-h3 {
-    padding-top: 2rem;
+.blog h2 {
+    padding: 1rem 0;
 }
 
 .aboutHarperContent {
@@ -173,7 +207,14 @@ h3 {
     padding: 2rem;
 }
 .recentPosts {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        li a:hover {
+            color: $quaternary;
+        }
+    }
 }
 
 .postContainer {
