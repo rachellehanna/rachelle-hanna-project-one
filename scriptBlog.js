@@ -13,6 +13,12 @@ button.addEventListener("click", function (event) {
     const email = inputEmail.value;
     const comment = inputComment.value;
 
+    //if user does not fill out all of the inputs, there is an alert
+
+    if (name === "" || email === "" || comment === "") {
+        alert("You must complete all the fields!");
+        return;
+    }
     //we take the strings and create element
 
     const commentContainerDiv = document.createElement("div");
