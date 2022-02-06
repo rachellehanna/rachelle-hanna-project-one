@@ -271,6 +271,7 @@ html {
 
 /*site fonts*/
 /*site colors*/
+/*loading circle */
 html {
   font-size: 125%;
   /*1 rem=20px*/
@@ -352,6 +353,154 @@ a {
   font-family: "Oswald", sans-serif;
 }
 
+.loadingContainer {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #b9dde7;
+}
+
+.circleOne {
+  background: rgba(246, 246, 246, 0.5);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  animation-direction: alternate-reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: bounceOne;
+          animation-name: bounceOne;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+@-webkit-keyframes bounceOne {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounceOne {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+.circleTwo {
+  background: rgba(243, 141, 141, 0.5);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: bounceTwo;
+          animation-name: bounceTwo;
+  animation-direction: alternate-reverse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+@-webkit-keyframes bounceTwo {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounceTwo {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+.circleThree {
+  width: 50px;
+  height: 50px;
+  background: rgba(34, 114, 132, 0.5);
+  border-radius: 50%;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: bounceThree;
+          animation-name: bounceThree;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+@-webkit-keyframes bounceThree {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounceThree {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-90px);
+            transform: translateY(-90px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
 .navBar {
   padding: 1rem 0;
   background-color: #b9dde7;
@@ -383,6 +532,13 @@ a {
 main {
   overflow: auto;
   /* prevent margins from escaping parent element */
+}
+
+.homepage nav,
+.homepage header,
+.homepage main,
+.homepage footer {
+  display: none;
 }
 
 button {

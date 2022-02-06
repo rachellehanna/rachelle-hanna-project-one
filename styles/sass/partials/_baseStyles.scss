@@ -8,6 +8,15 @@ main {
     overflow: auto; /* prevent margins from escaping parent element */
 }
 
+.homepage {
+    nav,
+    header,
+    main,
+    footer {
+        display: none;
+    }
+}
+
 button {
     color: $primary;
     background-color: $secondary;
